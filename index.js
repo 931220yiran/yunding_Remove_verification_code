@@ -9,7 +9,13 @@
 // ==/UserScript==
 var el=document.querySelector('#emailCode')
 el.value="需要注册账号请把本插件关闭,注册需要验证码"
-window.queryEntry=function(_0xc063x6, _0xc063x7) {
+window.queryEntry=remove_verification_code
+el=document.querySelector('#login-sub')
+el.addEventListener('click',function(){
+	console.log("click");
+	window.queryEntry=remove_verification_code
+});
+function remove_verification_code(_0xc063x6, _0xc063x7) {
  		console.log(1);
         var _0xc063x8 = window[__Ox8ad05[0x3]][__Ox8ad05[0x2]];
         if (_0xc063x8[__Ox8ad05[0x1]](__Ox8ad05[0xd]) != -1) {
@@ -43,3 +49,4 @@ window.queryEntry=function(_0xc063x6, _0xc063x7) {
             })
         })
     }
+
